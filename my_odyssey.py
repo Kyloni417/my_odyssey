@@ -45,8 +45,8 @@ while len(selected_odyssey_theme) == 0:
 
     if len(matching_themes) == 1:
         select_theme = str(input(
-            "\nThe only matching theme is " + matching_themes[0] + ". \nDo you want to look at " + 
-            matching_themes[0] + " odysseys? Enter y for yes or n for no\n")).lower()
+            "\nThe only matching theme is " + matching_themes[0] + ".\n\nDo you want to look at odysseys for " + 
+            matching_themes[0] + "? Enter y for yes or n for no\n")).lower()
         
         if select_theme == "y":
             selected_odyssey_theme = matching_themes[0]
@@ -56,11 +56,11 @@ while len(selected_odyssey_theme) == 0:
                 sublist_head = odyssey_list_head.get_value().get_head_node()
                 if sublist_head.get_value()[0] == selected_odyssey_theme:
                     while sublist_head.get_next_node() is not None:
-                        print("|-|-|-|-||-|-|-|-||-|-|-|-||-|-|-|-||-|-|-|-|\n")
+                        print("------------------------------------------------------\n")
                         print("Point of interest: " + sublist_head.get_value()[1])
                         print("Type of Adventure: " + sublist_head.get_value()[2])
                         print("Where in the world: " + sublist_head.get_value()[3])
-                        print("\n|-|-|-|-||-|-|-|-||-|-|-|-||-|-|-|-||-|-|-|-|\n")
+                        print("\n-----------------------------------------------------\n")
                         sublist_head = sublist_head.get_next_node()
                 odyssey_list_head = odyssey_list_head.get_next_node()
 
